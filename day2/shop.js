@@ -16,6 +16,16 @@ let inventory = [
     category: "Stationery",
     price: 150,
   },
+  {
+    name : "laptop",
+    category:"eletronic",
+    price:100000
+  },
+  {
+    name : "Iphone",
+    category:"eletronic",
+    price :100000
+  }
 ];
 
 //function to display all products
