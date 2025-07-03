@@ -1,10 +1,18 @@
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+// Error handling
+
+try {
+  let result = 10 / 0;
+  console.log("Result:", result);
+  throw new Error("Something went wrong");
+} catch (error) {
+  console.error("Caught Error:", error.message);
 }
 
-async function run() {
-  console.log("Start");
-  await delay(2000);
-  console.log("After 2 second");
+async function fetchData() {
+  try {
+    let data = await Promise.reject("Network error");
+  } catch (err) {
+    console.error("Caught async error:", err);
+  }
 }
-run();
+fetchData();
